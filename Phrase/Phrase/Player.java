@@ -24,6 +24,10 @@ public class Player {
     public String getP2(){
         return player2;
     }
+
+    //the code below was an attempt at making a money based point system, however
+    //there was not enough time to trouble shoot the error of earning money from
+    //typing the same letters
     public void Score1(){
         Spinner pts = new Spinner();
         if (pts.Bankrupt()>10){

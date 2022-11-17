@@ -11,7 +11,7 @@ private String lettersGuessed = "";
 private String enter = "";
   public Board()
   {
-    System.out.println("Welcome to the Smelly Hangman Game. This is a two-player game. The goal is to guess the idiom/saying. \nWhen you think that you have the entire phrase, you must guess the entire phrase! Press enter to continue");
+    System.out.println("Welcome to the Monotonous Hangman Game. This is a two-player game. When you think you know the phrase, take a guess. \nKeep in mind that in order to win, you must type out the entire phrase! Press enter to continue");
     enter = sc.nextLine();
     Player player = new Player();
     boolean p1 = true;
@@ -72,6 +72,9 @@ private String enter = "";
       System.out.println(player.getP2()+" won!");
     }
   }
+
+  //this code below helps print out underscores for the unguessed letters and the 
+  //corresponding letter for the guessed letter
   public String Blank(String g){
     String blank = "";
     if (g.length()<=1){
@@ -81,18 +84,18 @@ private String enter = "";
       else{
         lettersGuessed +=g;
         for (int i = 0; i<spaces;i++){
-            if(lettersGuessed.contains(idiom.substring(i,i+1))){
-              blank+=idiom.substring(i,i+1);
-            }
-            else if (idiom.substring(i,i+1).equals(" ")){
-              blank+=" ";
-            }
-            else{
-              blank+="_";
-            }
-          } 
-        }
+          if(lettersGuessed.contains(idiom.substring(i,i+1))){
+            blank+=idiom.substring(i,i+1);
+          }
+          else if (idiom.substring(i,i+1).equals(" ")){
+            blank+=" ";
+          }
+          else{
+            blank+="_";
+          }
+        } 
       }
+    }
     else{
       System.out.println("Only guess one letter at a time\n");
       System.out.println(Blank(""));
