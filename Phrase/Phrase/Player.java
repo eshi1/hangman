@@ -50,16 +50,4 @@ public class Player {
     public void getScore2(){
         System.out.println(player2+"'s money earned: "+ score2);
     }
-    public String guess(){
-        System.out.println("Player 1's guess: ");
-        String input = "";
-        input = sc.nextLine();
-        return input;
-    }
-    public String guess2(){
-        System.out.println("Player 2's guess: ");
-        String input2 = "";
-        input2 = sc.nextLine();
-        return input2;
-    }
 }
